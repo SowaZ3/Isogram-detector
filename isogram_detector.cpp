@@ -1,9 +1,8 @@
 #include <iostream>
-#include <algorithm> // transform
-
 
 bool is_isogram(std::string str) {
-    transform(str.begin(), str.end(), str.begin(), [](unsigned char c) {return tolower(c);});  // tolower transformation (program should not be case sens)
+
+    for (int i = 0; i < str.size(); i++) str[i] = tolower(str[i]);  // tolower transformation (program should not be case sens)
 
     bool trigger = true;
 
